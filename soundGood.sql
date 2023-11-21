@@ -1,13 +1,5 @@
-CREATE TABLE Address (
- city VARCHAR(50),
- zip VARCHAR(5),
- street VARCHAR(100)
-);
-
-
 CREATE TABLE Instrument (
  id INT NOT NULL,
- instrumentID  VARCHAR(10) NOT NULL UNIQUE,
  brand VARCHAR(10) NOT NULL,
  type VARCHAR(10) NOT NULL,
  quantity VARCHAR(10) NOT NULL
@@ -18,8 +10,8 @@ ALTER TABLE Instrument ADD CONSTRAINT PK_Instrument PRIMARY KEY (id);
 
 CREATE TABLE LessonPrice (
  id INT NOT NULL,
- type VARCHAR(10) NOT NULL,
- level  VARCHAR(10),
+ type VARCHAR(50) NOT NULL,
+ level  VARCHAR(50) NOT NULL,
  priceAmount  VARCHAR(10) NOT NULL,
  startTime TIMESTAMP NOT NULL,
  endTime TIMESTAMP
@@ -48,11 +40,6 @@ CREATE TABLE Phone (
 ALTER TABLE Phone ADD CONSTRAINT PK_Phone PRIMARY KEY (id);
 
 
-CREATE TABLE SiblingsInfo (
- siblings VARCHAR(500)
-);
-
-
 CREATE TABLE Student (
  id INT NOT NULL,
  discount VARCHAR(10),
@@ -77,7 +64,7 @@ CREATE TABLE LessonSchedule (
  id INT NOT NULL,
  startTime  TIMESTAMP NOT NULL,
  endTime TIMESTAMP NOT NULL,
- level VARCHAR(50),
+ level VARCHAR(50) NOT NULL,
  type VARCHAR(50) NOT NULL,
  lessonPriceId INT NOT NULL,
  instructor_id INT NOT NULL
@@ -96,7 +83,6 @@ ALTER TABLE person_phone ADD CONSTRAINT PK_person_phone PRIMARY KEY (person_id,p
 
 CREATE TABLE Rental (
  id INT NOT NULL,
- rentalID VARCHAR(500) NOT NULL UNIQUE,
  startDate TIMESTAMP NOT NULL,
  endDate TIMESTAMP NOT NULL,
  instrument_id INT NOT NULL,
