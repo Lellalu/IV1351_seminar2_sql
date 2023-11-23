@@ -1,3 +1,6 @@
+CREATE TYPE lessonType AS ENUM ('individual', 'group', 'ensemble');
+CREATE TYPE lessonLevel AS ENUM ('beginner', 'intermediate', 'advanced');
+
 CREATE TABLE Instrument (
  id INT NOT NULL,
  brand VARCHAR(10) NOT NULL,
@@ -10,8 +13,8 @@ ALTER TABLE Instrument ADD CONSTRAINT PK_Instrument PRIMARY KEY (id);
 
 CREATE TABLE LessonPrice (
  id INT NOT NULL,
- type VARCHAR(50) NOT NULL,
- level  VARCHAR(50) NOT NULL,
+ type lessonType NOT NULL,
+ level  lessonLevel NOT NULL,
  priceAmount  VARCHAR(10) NOT NULL,
  startTime TIMESTAMP NOT NULL,
  endTime TIMESTAMP
@@ -64,8 +67,6 @@ CREATE TABLE LessonSchedule (
  id INT NOT NULL,
  startTime  TIMESTAMP NOT NULL,
  endTime TIMESTAMP NOT NULL,
- level VARCHAR(50) NOT NULL,
- type VARCHAR(50) NOT NULL,
  lessonPriceId INT NOT NULL,
  instructor_id INT NOT NULL
 );

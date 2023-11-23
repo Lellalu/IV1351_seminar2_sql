@@ -63,18 +63,18 @@ VALUES
   (9,0.8,'vel, vulputate eu,',9,'076570255459'),
   (10,0.8,'fermentum risus, at fringilla purus mauris a nunc. In',10,'406964456164');
 
-INSERT INTO lessonschedule (id,starttime,endtime,level,type,lessonpriceid,instructor_id)
+INSERT INTO lessonschedule (id,starttime,endtime,lessonpriceid,instructor_id)
 VALUES
-  (1,'Nov 8, 2022','Dec 20, 2022','beginner','individual',7,3),
-  (2,'Nov 18, 2022','Dec 15, 2022','beginner','individual',8,7),
-  (3,'Nov 19, 2022','Dec 31, 2022','beginner','individual',6,7),
-  (4,'Nov 9, 2022','Dec 30, 2022','intermediate','group',5,7),
-  (5,'Nov 9, 2022','Dec 31, 2022','intermediate','group',5,4),
-  (6,'Nov 20, 2022','Dec 6, 2022','intermediate','group',5,5),
-  (7,'Nov 9, 2022','Dec 10, 2022','advanced','ensemble',3,9),
-  (8,'Nov 12, 2022','Dec 8, 2022','advanced','ensemble',6,7),
-  (9,'Nov 12, 2022','Dec 19, 2022','advanced','ensemble',2,4),
-  (10,'Nov 7, 2022','Dec 16, 2022','beginner','individual',7,2);
+  (1,'Nov 8, 2022','Dec 20, 2022',7,3),
+  (2,'Nov 18, 2022','Dec 15, 2022',8,7),
+  (3,'Nov 19, 2022','Dec 31, 2022',6,7),
+  (4,'Nov 9, 2022','Dec 30, 2022',5,7),
+  (5,'Nov 9, 2022','Dec 31, 2022',5,4),
+  (6,'Nov 20, 2022','Dec 6, 2022',5,5),
+  (7,'Nov 9, 2022','Dec 10, 2022',3,9),
+  (8,'Nov 12, 2022','Dec 8, 2022',6,7),
+  (9,'Nov 12, 2022','Dec 19, 2022',2,4),
+  (10,'Nov 7, 2022','Dec 16, 2022',7,2);
 
 INSERT INTO lessoncapacity (id,max,min,lessonid)
 VALUES
